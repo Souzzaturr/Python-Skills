@@ -29,3 +29,11 @@ def metade (valor: float) -> float:
     """Recebe -> um valor float qualquer;
     Retorna -> A metade desse valor."""
     return valor / 2
+
+
+
+def formatar_valor (valor: float) -> str:
+    """Recebe -> um valor float qualquer;
+    Valor: um número inteiro qualquer;
+    Retorna -> Uma string no seguinte formato: R$valor.00"""
+    return f"R${valor:.2f}"

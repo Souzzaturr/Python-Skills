@@ -6,10 +6,10 @@ import moeda
 preco = float(input("Digite um preço: R$"))
 
 
-print(f"A metade de {preco} é {moeda.metade(preco)}")
+print(f"A metade de {moeda.formatar_valor(preco)} é {moeda.formatar_valor(moeda.metade(preco))}")
 
-print(f"O dobro de {preco} é {moeda.dobro(preco)}")
+print(f"O dobro de {moeda.formatar_valor(preco)} é {moeda.formatar_valor(moeda.dobro(preco))}")
 
-print(f"Aumentando 10% de {preco}, temos {moeda.aumentar(preco, 10)}")
+print(f"Aumentando 10% de {moeda.formatar_valor(preco)}, temos {moeda.formatar_valor(moeda.aumentar(preco, 10))}")
 
-print(f"Diminuindo 13% de {preco}, temos {moeda.diminuir(preco, 13)}")
+print(f"Diminuindo 13% de {moeda.formatar_valor(preco)}, temos {moeda.formatar_valor(moeda.diminuir(preco, 13))}")
