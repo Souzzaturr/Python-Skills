@@ -1,33 +1,47 @@
 #Módulo com funções de moedas
 
-def aumentar (valor: float, percentual = 50.0) -> float:
-    """Recebe -> um valor float qualquer;
+def aumentar (valor: float, percentual = 50.0, formatar = False) -> float | str:
+    """Recebe -> um valor float qualquer, um percentual de quanto vai ser acrecentado ao valor, e um parametro formatar;
     Valor: valor a ser aumentado;
     Percentual: percentual a ser acrescido à valor (padrão é 50%);
+    Formatar: retorna o valor formatado em 'R$valor.00' se True, ou sem formatação se False;
     Retorna -> o valor acrescido da porcentagem escolhida."""
+    if formatar:
+        return formatar_valor(valor + valor * percentual/100)
     return valor + valor * percentual/100
     
 
 
-def diminuir (valor: float, percentual = 50.0) -> float:
-    """Recebe -> um valor float qualquer;
+def diminuir (valor: float, percentual = 50.0, formatar = False) -> float:
+    """Recebe -> um valor float qualquer, um percentual de quanto vai ser subtraido de valor, e um parametro formatar;
     Valor: valor a ser diminuido;
     Percentual: percentual a ser subtraido de valor;
+    Formatar: retorna o valor formatado em 'R$valor.00' se True, ou sem formatação se False;
     Retorna -> porcentagem restante do valor."""
+    if formatar:
+        return formatar_valor(valor * (1.0 - percentual/100))
     return valor * (1.0 - percentual/100)
 
 
 
-def dobro (valor: float) -> float:
-    """Recebe -> um valor float qualquer;
+def dobro (valor: float, formatar = False) -> float:
+    """Recebe -> um valor float qualquer, e um parametro formatar;
+    Valor: valor a ser dobrado;
+    Formatar: retorna o valor formatado em 'R$valor.00' se True, ou sem formatação se False;
     Retorna -> o dobro desse valor."""
+    if formatar:
+        return formatar_valor(valor * 2)
     return valor * 2
 
 
 
-def metade (valor: float) -> float:
-    """Recebe -> um valor float qualquer;
+def metade (valor: float, formatar = False) -> float:
+    """Recebe -> um valor float qualquer, e um parametro formatar;
+    Valor: valor a ser dividido pela metade;
+    Formatar: retorna o valor formatado em 'R$valor.00' se True, ou sem formatação se False;
     Retorna -> A metade desse valor."""
+    if formatar:
+        return formatar_valor(valor / 2)
     return valor / 2
 
 
