@@ -69,3 +69,4 @@ def resumo (valor: float, aumento = 50.0, reducao = 50.0) -> str:
     print(f"{f'{aumento}% de aumento:           {aumentar(valor, aumento, True)}': ^50}")
     print(f"{f'{reducao}% de redução:           {diminuir(valor, reducao, True)}': ^50}")
     print("-" * 50)
+    return
