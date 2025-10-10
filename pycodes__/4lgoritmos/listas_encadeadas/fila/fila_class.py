@@ -78,7 +78,7 @@ class Fila:
         texto = ""
 
         while ponteiro != None:
-            texto += f"{ponteiro.conteudo}, "
+            texto += f"{ponteiro.conteudo}" + (" -> " if ponteiro.proximo != None else "")
             ponteiro = ponteiro.proximo
 
         return texto
